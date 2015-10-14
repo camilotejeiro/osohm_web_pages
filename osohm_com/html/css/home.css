@@ -10,78 +10,49 @@
 {
 	position: relative;
 	width:100%;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 	text-align: center;
 }
-
 .section-title
 {
-}
-
-.section-subtitle, .section-description
-{
-	margin-bottom: 1.2rem;
+	display: none;
 }
 
 /* Overriding Properties for Larger Devices. */
 
-/* Larger than phone */
-@media (min-width: 400px) 
-{
-	.section
-	{
-		padding-top: 10rem;
-		padding-bottom: 9rem;
-	}
-}
 /* Larger than phablet */
 @media (min-width: 550px) 
 {
 	.section
 	{
-		padding-top: 12rem;
-		padding-bottom: 11rem;
+		margin-top: 15vh;
+		margin-bottom: 10vh;
 	}
-}
-
-/* Larger than tablet */
-@media (min-width: 750px) 
-{
-	.section
+	.section-title
 	{
-		padding-top: 14rem;
-		padding-bottom: 13rem;
+		display: block;
 	}
 }
 
-/* Larger than desktop */
-@media (min-width: 1000px) 
+/*****************
+ * Sticky Footnote
+ *****************/
+/* Override wrapper and push to add sticky footnote */
+/* wrapper for sticky footnote and footer*/
+.wrapper
 {
-	.section
-	{
-		padding-top: 16rem;
-		padding-bottom: 15rem;
-	}
+	min-height: 100%;
+	margin: 0 auto -71px;
 }
 
-/* Larger than Desktop HD */
-@media (min-width: 1200px) 
+/* Navigation push for sticky footnote and footer */
+.push
 {
-	.section
-	{
-		padding-top: 18rem;
-		padding-bottom: 17rem;
-	}
+	height: 71px;
 }
 
-/****************************
- * Variable Section Parametters. 
- ****************************/
-.purpose, .learn, .invest
+.footnote
 {
-	border-bottom: 1px dotted #bbb;
+	text-align: center;
 }
-
-
-

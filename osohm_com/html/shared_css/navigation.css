@@ -54,42 +54,6 @@ html, body
 	color: #0FA0CE; 
 }
 
-/* Nav Head Search Text Form */
-input[type="navhead-text"]
-{
-	height: 30px;
-	width: 175px;
-	padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
-	margin: 5px;
-	background-color: #fff;
-	border: 1px solid #EDEDED;
-	font-size: 11px;
-	letter-spacing: .2rem;
-	text-decoration: none;
-	color: #222; 
-	text-align: left;
-	border-radius: 4px;
-	box-shadow: none;
-	box-sizing: border-box; 
-}
-
-/* Removes awkward default styles on some inputs for iOS */
-input[type="navhead-text"]
-{
-	-webkit-appearance: none;
-	 -moz-appearance: none;
-		  appearance: none; 
-}
-
-input[type="navhead-text"]:focus
-{
-	border: 1px solid #33C3F0;
-	outline: 0; 
-}
-
-
-
-
 /****************************
  * Navigation Footer Properties 
  ****************************/
@@ -100,7 +64,7 @@ input[type="navhead-text"]:focus
 	margin: 0 auto -32px;
 }
 
-/* push for sticky footer */
+/* Navigation push for sticky footer */
 .push
 {
 	height: 32px;
