@@ -1,0 +1,142 @@
+/***********************************************************************
+* Shared Navigation CSS for osohm platform.
+* Navigation styles for all pages in our osohm.com domain, Including 
+* a navigation header and a navigation sticky footer.
+***********************************************************************/
+
+/***************************************
+ * General properties for sticky footer. 
+ ***************************************/
+html, body 
+{ 
+	margin: 0;
+	height: 100%; 
+}
+
+/****************************
+ * Navigation Header Properties 
+ ****************************/
+.navhead
+{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	padding-top: 10px;
+	padding-bottom:10px;
+	border-bottom: 1px solid #ddd;
+}
+
+.navhead > .container 
+{
+	width: 100%; 
+	text-align: center;	
+}
+
+.navhead-link 
+{
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 600;
+	margin: 10px;
+	letter-spacing: .2rem;
+	text-decoration: none;
+	color: #222222; 
+}
+
+.navhead-link-current
+{
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: 600;
+	margin: 10px;
+	letter-spacing: .2rem;
+	text-decoration: none;
+	color: #0FA0CE; 
+}
+
+/* Nav Head Search Text Form */
+input[type="navhead-text"]
+{
+	height: 30px;
+	width: 175px;
+	padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+	margin: 5px;
+	background-color: #fff;
+	border: 1px solid #EDEDED;
+	font-size: 11px;
+	letter-spacing: .2rem;
+	text-decoration: none;
+	color: #222; 
+	text-align: left;
+	border-radius: 4px;
+	box-shadow: none;
+	box-sizing: border-box; 
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="navhead-text"]
+{
+	-webkit-appearance: none;
+	 -moz-appearance: none;
+		  appearance: none; 
+}
+
+input[type="navhead-text"]:focus
+{
+	border: 1px solid #33C3F0;
+	outline: 0; 
+}
+
+
+
+
+/****************************
+ * Navigation Footer Properties 
+ ****************************/
+/* wrapper for sticky footer */
+.wrapper
+{
+	min-height: 100%;
+	margin: 0 auto -32px;
+}
+
+/* push for sticky footer */
+.push
+{
+	height: 32px;
+}
+
+.navfoot 
+{
+	display: block;
+	width: 100%;
+	height: 31px;
+	background: #fff;
+	border-top: 1px solid #eee;
+}
+
+.navfoot > .container 
+{
+	width: 100%; 
+	text-align: center;	
+}
+
+.navfoot-link 
+{
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: .2rem;
+	text-decoration: none;
+	line-height:100%;
+	color: #222222; 
+}
+
+.navfoot-link-current
+{
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: .2rem;
+	text-decoration: none;
+	line-height:100%;
+	color: #0FA0CE; 
+}

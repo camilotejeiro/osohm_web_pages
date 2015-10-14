@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--=================================================================  
+	Osohm.com index.html webpage
+	=================================================================-->
+
+<html lang="en">
+	<head>
+		<!-- Basic Page Needs -->
+		<meta charset="utf-8">
+		<title>Osohm</title>
+		<meta name="description" content="sound economics for open technologies">
+		<meta name="author" content="the osohm team">
+
+		<!-- Mobile Specific Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- FONT -->
+		<link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+		<!-- Domain/Platform General CSS -->
+		<link rel="stylesheet" href="shared_css/normalize.css">
+		<link rel="stylesheet" href="shared_css/skeleton.css">
+		<link rel="stylesheet" href="shared_css/navigation.css">
+		<link rel="stylesheet" href="shared_css/content.css">
+				
+		<!-- Page Specific CSS -->
+		<link rel="stylesheet" href="css/home.css">
+
+		<!-- Favicon -->
+		<!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<nav class="navhead">
+				<div class="container">
+					<div class="row">
+						<div class="three columns">
+							<a class="navhead-link" href="http://osohm.com">Osohm</a>
+						</div>
+						<div class="three columns">
+							<a class="navhead-link" href="http://osohm.com/create_project">Create Open Project</a>
+						</div>
+						<div class="three columns">
+							<a class="navhead-link" href="http://osohm.com/search_projects">Search Open Projects</a>
+						</div>	
+						<div class="three columns">
+							<a class="navhead-link" href="http://osohm.com/login">Login</a>
+						</div>
+					</div>			
+				</div>	
+			</nav>
+			<div class="content">				
+				<div class="section purpose">
+					<h3 class="section-title">Our Purpose</h3>
+					<h4 class="section-subtitle">
+						Osohm is a community investment platform for the development of 
+						open technology
+					</h4>
+					<p class="section-description">
+						A place where informed consumers can invest directly in the 
+						open technologies they need
+					</p>
+					<div class="container">
+						<div class="row">						
+							<div class="four columns">
+								<a class="button" href="#learn">Learn</a>
+								<p> Become an Informed Consumer</p>
+							</div>
+							<div class="four columns">
+								<a class="button" href="#invest">Invest</a>
+								<p> Invest in the technology you use</p>
+							</div>	
+							<div class="four columns">
+								<a class="button" href="#create">Create</a>
+								<p> Create open technology</p>
+							</div>
+						</div>										
+					</div>
+				</div>
+				<div class="section learn" id="learn">
+					<h3 class="section-title">Learn</h3>
+					<h4 class="section-subtitle">
+						Open technology makes us better consumers
+					</h4>
+					<p class="section-description">
+						Open means we have access to honest and transparent 
+						information about the products and services we 
+						use, directly from the people who make them
+					</p>
+					<div class="container">
+						<div class="row">						
+							<div class="four columns">
+								<a class="button" href="http://osohm.com">Software</a>
+								<p>Search for open software</p>
+							</div>
+							<div class="four columns">
+								<a class="button" href="http://osohm.com">Hardware</a>
+								<p>Search for open hardware</p>
+							</div>	
+							<div class="four columns">
+								<a class="button" href="http://osohm.com">Research</a>
+								<p>Search for open research</p>
+							</div>
+						</div>										
+					</div>		
+				</div>
+				<div class="section invest" id="invest">
+					<h3 class="section-title">Invest</h3>
+					<h4 class="section-subtitle">
+						Invest in real value, invest in open technology
+					</h4>
+					<p class="section-description">
+						Investing in open technology means tangible value 
+						for each individual plus open intellectual property 
+						for the community. <br>
+						We get technology we can use and open knowledge 
+						we can build upon
+					</p>
+					<div class="container">
+						<div class="row">						
+							<div class="six columns" id="">
+								<a class="button" href="http://osohm.com">Invest Time</a>
+								<p>Contribute your skills, join a project</p>
+							</div>
+							<div class="six columns">
+								<a class="button" href="http://osohm.com">Invest Funds</a>
+								<p>Purchase voting shares, finance a project</p>
+							</div>	
+						</div>										
+					</div>					
+				</div>
+				<div class="section create" id="create">
+					<h3 class="section-title">Create</h3>
+					<h4 class="section-subtitle">
+						A sustainable way to develop the open technologies 
+						we need
+					</h4>
+					<p class="section-description">
+						Have an idea? Let's get started
+					</p>
+					<a class="button" href="http://osohm.com">Create Open Project</a>
+				</div>
+			</div>
+			<div class="push"></div>
+		</div>	
+		<nav class="navfoot">
+			<div class="container">
+				<div class="row">
+					<div class="one-third column">
+						<a class="navfoot-link" href="http://osohm.com/blog">Blog</a>
+					</div>
+					<div class="one-third column">
+						<a class="navfoot-link" href="http://osohm.com/about">About Us</a>
+					</div>
+					<div class="one-third column">
+						<a class="navfoot-link" href="http://osohm.com/credits">Credits</a>
+					</div>
+				</div>	
+			</div>	
+		</nav>
+	</body>
+</html>

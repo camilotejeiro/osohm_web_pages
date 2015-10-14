@@ -1,0 +1,13 @@
+/***********************************************************************
+* Login Page CSS for osohm platform.
+* Authors: Camilo Tejeiro
+***********************************************************************/
+
+/****************************
+ * Login Section Properties 
+ ****************************/
+.login-section { width: 100%; }
+
+.login-section-heading { text-align: center; } 
+
+.login-section-description { margin-bottom: 1.2rem; }

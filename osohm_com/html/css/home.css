@@ -1,0 +1,87 @@
+/***********************************************************************
+* Home Page CSS for osohm platform.
+***********************************************************************/
+
+/****************************
+ * Default Section Properties 
+ ****************************/
+/* Default Section Properties for small devices */
+.section
+{
+	position: relative;
+	width:100%;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	text-align: center;
+}
+
+.section-title
+{
+}
+
+.section-subtitle, .section-description
+{
+	margin-bottom: 1.2rem;
+}
+
+/* Overriding Properties for Larger Devices. */
+
+/* Larger than phone */
+@media (min-width: 400px) 
+{
+	.section
+	{
+		padding-top: 10rem;
+		padding-bottom: 9rem;
+	}
+}
+/* Larger than phablet */
+@media (min-width: 550px) 
+{
+	.section
+	{
+		padding-top: 12rem;
+		padding-bottom: 11rem;
+	}
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) 
+{
+	.section
+	{
+		padding-top: 14rem;
+		padding-bottom: 13rem;
+	}
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) 
+{
+	.section
+	{
+		padding-top: 16rem;
+		padding-bottom: 15rem;
+	}
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) 
+{
+	.section
+	{
+		padding-top: 18rem;
+		padding-bottom: 17rem;
+	}
+}
+
+/****************************
+ * Variable Section Parametters. 
+ ****************************/
+.purpose, .learn, .invest
+{
+	border-bottom: 1px dotted #bbb;
+}
+
+
+
