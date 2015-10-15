@@ -43,16 +43,17 @@
 .wrapper
 {
 	min-height: 100%;
-	margin: 0 auto -71px;
+	margin: 0 auto -70px;
 }
 
 /* Navigation push for sticky footnote and footer */
 .push
 {
-	height: 71px;
+	height: 70px;
 }
 
 .footnote
 {
 	text-align: center;
 }
+
