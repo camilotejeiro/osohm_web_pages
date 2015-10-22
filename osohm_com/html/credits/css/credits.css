@@ -1,23 +1,11 @@
 /***********************************************************************
 * Credits Page CSS for osohm platform.
-* Authors: Camilo Tejeiro
 ***********************************************************************/
 
 /****************************
  * Credits Section Properties 
  ****************************/
-.credits-section { width: 100%; }
-
-.credits-section-heading { text-align: center; } 
-
-.credits-section-subheading 
-{ 
-	text-align: center; 
-	margin-bottom: 0.25rem; 	
-}
-
-.credits-section-description 
-{ 	
+#credits-section
+{
 	text-align: center;
-	margin-bottom: 2rem; 
 }

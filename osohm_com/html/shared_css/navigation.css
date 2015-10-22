@@ -38,17 +38,8 @@ html, body
 	
 }
 
-.navhead-link-current
-{
-	display:block;
-	text-transform: uppercase;
-	font-size: 11px;
-	font-weight: 600;
-	letter-spacing: .2rem;
-	text-decoration: none;
-	text-align: center;
-	color: #222222;
-	padding: 11.2px; 	
+#navhead-link-current
+{	
 	background-color: #eeeeee;
 }
 
@@ -89,16 +80,7 @@ html, body
 	padding: 7px;
 }
 
-.navfoot-link-current
-{
-	display:block;
-	text-transform: uppercase;
-	font-size: 10px;
-	font-weight: 600;
-	letter-spacing: .2rem;
-	text-decoration: none;
-	text-align: center;
-	color: #222222;
-	padding: 7px; 	
+#navfoot-link-current
+{	
 	background-color: #eee;
 }

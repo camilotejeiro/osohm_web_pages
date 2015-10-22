@@ -1,6 +1,5 @@
 /***********************************************************************
 * Shared Content CSS for osohm platform.
-* Content mobile ready styles for all pages in our osohm.com domain.
 ***********************************************************************/
 
 /****************************
@@ -10,62 +9,20 @@
 .content
 {
 	position: relative;
-	margin-right: 1rem;
-	margin-left: 1rem;
+	margin: 1rem;
 }
 
-/* Larger than phone */
-/*
-@media (min-width: 400px) 
+.quote
 {
-	.content
-	{
-		margin-right: 5vw;
-		margin-left: 5vw;	
-	}	
-}
-*/
-
-/* Larger than phablet */
-/*
-@media (min-width: 550px) 
-{
-	.content
-	{
-		margin-right: 10vw;
-		margin-left: 10vw;	
-	}	
-}
-*/
-
-/* Larger than tablet */
-/*
-@media (min-width: 750px) 
-{
-	.content
-	{
-		margin-right: 15vw;
-		margin-left: 15vw;
-	}
-}
-*/
-
-/* Larger than desktop */
-@media (min-width: 1000px) 
-{
-	.content
-	{
-		margin-right: 10vw;
-		margin-left: 10vw;
-	}
+	font-style: italic;
 }
 
-/* Larger than Desktop HD */
-@media (min-width: 1200px) 
+.footnote
 {
-	.content
-	{
-		margin-right: 20vw;
-		margin-left: 20vw;
-	}
+	text-align: center;
+}
+
+.disclaimer
+{
+	font-style: italic;
 }

@@ -2,17 +2,6 @@
 * Create Project Page CSS for osohm platform.
 ***********************************************************************/
 
-/****************************
- * Create Project Section Properties 
- ****************************/
-.create-section 
-{ 
-	position: relative;
-	width:100%;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-}
-
-.create-section-heading { } 
-
-.create-section-description { margin-bottom: 1.2rem; }
+/***************************
+ * Create Section Properties 
+ ***************************/

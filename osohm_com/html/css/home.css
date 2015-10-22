@@ -3,24 +3,14 @@
 ***********************************************************************/
 
 /****************************
- * Default Section Properties 
+ * Home Section Properties 
  ****************************/
-/* Default Section Properties for small devices */
-.home-section
+#home-section
 {
-	position: relative;
-	width:100%;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
 	text-align: center;
 }
 
-.home-section-quote
-{
-	font-style: italic;
-}
-
-.home-section-title
+#home-section-title
 {
 	display: none;
 }
@@ -30,12 +20,12 @@
 /* Larger than phablet */
 @media (min-width: 550px) 
 {
-	.home-section
+	#home-section
 	{
 		margin-top: 15vh;
 		margin-bottom: 10vh;
 	}
-	.home-section-title
+	#home-section-title
 	{
 		display: block;
 	}
@@ -45,7 +35,6 @@
  * Sticky Footnote
  *****************/
 /* Override wrapper and push to add sticky footnote */
-/* wrapper for sticky footnote and footer*/
 .wrapper
 {
 	min-height: 100%;
@@ -57,9 +46,3 @@
 {
 	height: 70px;
 }
-
-.footnote
-{
-	text-align: center;
-}
-
