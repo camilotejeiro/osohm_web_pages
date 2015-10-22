@@ -28,3 +28,13 @@
 	font-weight: bold;
 }
 
+.faq-section-answer
+{
+	display: none;
+}
+
+.faq-section-answer:target
+{
+	display:block;
+}
+
