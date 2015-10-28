@@ -2,3 +2,8 @@
 
 # Ignore our server logs.
 *.log
+
+# Ignore static reference-only copies
+# e.g. project_name-v0.3-20151008 is a snapshot copy 
+# of our project for easy reference and should not be pushed.
+*-v*
