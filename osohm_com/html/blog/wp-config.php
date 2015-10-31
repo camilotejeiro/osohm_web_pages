@@ -26,7 +26,7 @@ define('DB_NAME', 'osohm_wordpress_db');
 define('DB_USER', 'osohm_user');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'mySqlOsohm89');
+define('DB_PASSWORD', 'osohm_user0615@mySql');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
