@@ -1,8 +1,17 @@
-<!DOCTYPE html>
 <!--=================================================================  
-	Osohm.com/login index.html webpage
+	Osohm.com/login webpage
 	=================================================================-->
+<?php
+	require_once('../shared_php/class.php');
+	if ( $_GET['action'] == 'logout' ) 
+	{
+		$loggedout = $j->logout();
+	}
+	
+	$logged = $j->login('../user_account/index.php');
+?>
 
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<!-- Basic Page Needs -->

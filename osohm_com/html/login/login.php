@@ -16,7 +16,7 @@
 	</head>
 
 	<body>
-		<div class="content">
+		<div style="width: 960px; background: #fff; border: 1px solid #e4e4e4; padding: 20px; margin: 10px auto;">
 			<?php if ( $logged == 'invalid' ) : ?>
 				<p style="background: #e49a9a; border: 1px solid #c05555; padding: 7px 10px;">
 					The username password combination you entered is incorrect. Please try again.
