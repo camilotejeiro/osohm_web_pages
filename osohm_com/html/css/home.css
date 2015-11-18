@@ -7,12 +7,12 @@
  ****************************/
 #home-section
 {
-	text-align: center;
+    text-align: center;
 }
 
 #home-section-title
 {
-	display: none;
+    display: none;
 }
 
 /* Overriding Properties for Larger Devices. */
@@ -20,15 +20,15 @@
 /* Larger than phablet */
 @media (min-width: 550px) 
 {
-	#home-section
-	{
-		margin-top: 15vh;
-		margin-bottom: 10vh;
-	}
-	#home-section-title
-	{
-		display: block;
-	}
+    #home-section
+    {
+        margin-top: 15vh;
+        margin-bottom: 10vh;
+    }
+    #home-section-title
+    {
+        display: block;
+    }
 }
 
 /*****************
@@ -37,12 +37,12 @@
 /* Override wrapper and push to add sticky footnote */
 .wrapper
 {
-	min-height: 100%;
-	margin: 0 auto -70px;
+    min-height: 100%;
+    margin: 0 auto -70px;
 }
 
 /* Navigation push for sticky footnote and footer */
 .push
 {
-	height: 70px;
+    height: 70px;
 }

@@ -3,80 +3,100 @@
  * Users My account page.
  * This is the users-only account page.
  **********************************************************************/
-	require_once('load.php');
-	$logged = $j->checkLogin();
-	
-	if ( $logged == false ) 
-	{
-		//Build our redirect
-		$url = "http" . ((!empty($_SERVER['HTTPS'])) ? "s" : "") . "://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-		$redirect = str_replace('index.php', 'login.php', $url);
-		
-		//Redirect to the home page
-		header("Location: $redirect?msg=login");
-		exit;
-	} 
-	else 
-	{
-		//Grab our authorization cookie array
-		$cookie = $_COOKIE['osohmlogauth'];
-		
-		//Set our user and authID variables
-		$user = $cookie['user'];
-		$authID = $cookie['authID'];
-		
-		//Query the database for the selected user
-		$table = 'users';
-		$sql = "SELECT * FROM $table WHERE user_login = '" . $user . "'";
-		$results = $osohm_database->select($sql);
+    require_once('../shared_php/UserMembership.php');
+    
+    $check_login_result_code = $osohm_user_membership->checkLogin();
 
-		//Kill the script if the submitted username doesn't exit
-		if ($results == FALSE) 
-		{
-			die('Sorry, that username does not exist!');
-		}
-
-		//Fetch our results into an associative array
-		$results = mysql_fetch_assoc( $results );
-	}
+    if (isset($_POST['submit']) == TRUE)
+    {
+        $logout_result_code = $osohm_user_membership->logout();
+    }
+    
 ?>
 <html>
-	<head>
-		<title>Members Area</title>
-		<style type="text/css">
-			body { background: #c7c7c7;}
-		</style>
-	</head>
+    <head>
+        <!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <title>User Account - Osohm</title>
+        <meta name="description" content="User Account">
+        <meta name="author" content="the Osohm team">
 
-	<body>
-		<div style="width: 960px; background: #fff; border: 1px solid #e4e4e4; padding: 20px; margin: 10px auto;">
-			<h3>Members Area</h3>
-			<p><b>User Info</b></p>
-			<table>
-				<tr>
-					<td>Name: </td>
-					<td><?php echo $results['user_name']; ?></td>
-				</tr>
-				
-				<tr>
-					<td>Username: </td>
-					<td><?php echo $results['user_login']; ?></td>
-				</tr>
-				
-				<tr>
-					<td>Email: </td>
-					<td><?php echo $results['user_email']; ?></td>
-				</tr>
-				
-				<tr>
-					<td>Registered: </td>
-					<td><?php echo date('l, F jS, Y', $results['user_registered']); ?></td>
-				</tr>
-			</table>
-			
-			<p>This is the members only area. Only logged in users can view this page. Please <a href="login.php?action=logout">click here to logout</a></p>
-			
-			
-		</div>
-	</body>
+        <!-- Mobile Specific Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- FONT -->
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+        <!-- Domain/Platform General CSS -->
+        <link rel="stylesheet" href="../shared_css/normalize.css">
+        <link rel="stylesheet" href="../shared_css/skeleton.css">
+        <link rel="stylesheet" href="../shared_css/navigation.css">
+        <link rel="stylesheet" href="../shared_css/content.css">
+                        
+        <!-- Page Specific CSS -->
+        <!-- <link rel="stylesheet" href="css/user_account.css"> -->
+        
+        <!-- Favicon -->
+        <!-- <link rel="icon" type="image/png" href="images/favicon.png"> -->
+
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <nav class="navhead">
+                <div class="container">
+                    <div class="row">
+                        <div class="three columns">
+                            <a class="navhead-link" href="http://osohm.com">Osohm</a>
+                        </div>
+                        <div class="three columns">
+                            <a class="navhead-link" href="http://osohm.com/create_project">Create Project</a>
+                        </div>
+                        <div class="three columns">
+                            <a class="navhead-link" href="http://osohm.com/search_projects">Search Projects</a>
+                        </div>
+                        <div class="three columns">
+                            <a class="navhead-link" id="navhead-link-current" href="http://osohm.com/user_account">My Account</a>
+                        </div>
+                    </div>                
+                </div>
+            </nav>            
+            <div class="container">
+                <div class="content" id="user-account-section">        
+                    <?php if ($check_login_result_code == CHECK_LOGIN_SESSION_FOUND) : ?>
+                        <p>
+                            Alright you are logged in, you have access to your account.
+                        </p>
+                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                            <input type="submit" name="submit" value="Logout" />
+                        </form>
+                    <?php else: ?>
+                        <p>
+                            You are not logged in.
+                            <a href="../login/index.php">Login here</a>
+                        </p>                
+                    <?php endif; ?>
+                </div>    
+            </div>
+            <div class="push"></div>
+        </div>
+        <nav class="navfoot">
+            <div class="container">
+                <div class="row">
+                    <div class="three columns">
+                        <a class="navfoot-link" href="http://osohm.com/blog">Blog</a>
+                    </div>
+                    <div class="three columns">
+                        <a class="navfoot-link" href="http://osohm.com/faq">FAQ</a>
+                    </div>
+                    <div class="three columns">
+                        <a class="navfoot-link" href="http://osohm.com/about">About Us</a>
+                    </div>
+                    <div class="three columns">
+                        <a class="navfoot-link" href="http://osohm.com/credits">Credits</a>
+                    </div>
+                </div>    
+            </div>    
+        </nav>
+    </body>
 </html>
