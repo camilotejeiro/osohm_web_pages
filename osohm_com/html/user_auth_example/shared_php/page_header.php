@@ -1,3 +1,11 @@
+<?php
+/***********************************************************************
+ * Page Header
+ * Shared accross all of our pages.
+ * @author Camilo Tejeiro   ,=,e 
+ **********************************************************************/
+?>
+
 <head>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">

@@ -1,64 +1,88 @@
 <?php
 /***********************************************************************
  * Example Login Page
+ * @author Camilo Tejeiro   ,=,e 
  ***********************************************************************/
-
+    
+    /*
+     * Page requires and includes.
+     */
     require_once('shared_php/result_codes.php');
     require_once('shared_php/user_forms_validation.php');
     require_once('shared_php/mysql_database.php');
     require_once('shared_php/user_membership.php');
-
-    session_start();
+    require_once('shared_php/error_handling.php'); 
      
-    # Header variables.
+    /*
+     * Vars declaraction and initialization.
+     */     
+    // Page Header variables.
     $page_title = 'Login - CAT';
     $page_description = 'login page';
     $page_author = 'CAT team';
-    # $page_styles = 'css/login.css';
+    // $page_styles = 'css/login.css';
     
-    # Declare and initialize our variables.
+    // page script variables.
+    $page_result_code = SUCCESS_NO_ERROR;
+    $page_message = "please enter your username and password";
+    
     $user_name = "";
     $user_password = "";
 
-    $validation_result = SUCCESS_NO_ERROR;
-    $login_result = SUCCESS_NO_ERROR;
-    $login_message = "please enter your username and password";
+    /*
+     * Page script logic
+     */
+    session_start();
     
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    $page_result_code = check_login_session();
+    
+     // if a login session exists, make sure you redirect to the my account page. 
+    if ($page_result_code == SUCCESS_NO_ERROR)
     {
-        // Create short variable names. 
-        $user_name = $_POST['user_name'];
-        $user_password = $_POST['user_password'];
-        
-        $validation_result = validate_login_form($user_name, $user_password);
-        
-         // if validation was succesful
-        if ($validation_result == SUCCESS_NO_ERROR)
+        // redirect to the 'user_account' page
+        // REMEMBER:
+        // header() must be called before any actual output is 
+        // sent, either by normal HTML tags, blank lines in a file, or from PHP.
+        // plus addressess must be absolute (we need to change this)
+        header("Location: user_account/index.php");
+    }
+    else
+    {
+        if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
-            $login_result = login_user($user_name, $user_password);
+            // Create short variable names. 
+            $user_name = $_POST['user_name'];
+            $user_password = $_POST['user_password'];
             
-            if($login_result == SUCCESS_NO_ERROR)
+            $page_result_code = validate_login_form($user_name, $user_password);
+            
+             // if validation was succesful
+            if ($page_result_code == SUCCESS_NO_ERROR)
             {
-                $login_message = "login successful"; 
+                $page_result_code = login_user($user_name, $user_password);
                 
-                // redirect to the 'my_account' page
-                // REMEMBER:
-                // header() must be called before any actual output is 
-                // sent, either by normal HTML tags, blank lines in a file, or from PHP.
-                // plus addressess must be absolute (we need to change this)
-                header("Location: user_account/index.php");
+                if($page_result_code == SUCCESS_NO_ERROR)
+                {
+                    $page_message = "login successful"; 
+                    
+                    // redirect to the 'my_account' page
+                    // REMEMBER:
+                    // header() must be called before any actual output is 
+                    // sent, either by normal HTML tags, blank lines in a file, or from PHP.
+                    // plus addressess must be absolute (we need to change this)
+                    header("Location: user_account/index.php");
+                }
+                else
+                {
+                    handle_result_code($page_result_code, $page_message);
+                }
             }
             else
-            {
-                $login_message = "login not successful: $login_result"; 
-            }
+            {   
+                handle_result_code($page_result_code, $page_message);
+            }       
         }
-        else
-        {   
-            $login_message = "wrong username/password: $validation_result"; 
-        }       
     }
-    
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +92,7 @@
     
     <body>
         <h4>Login Page</h4>
-        <p><?php echo "$login_message"; ?></p>
+        <p><?php echo "$page_message"; ?></p>
         <a href='registration/index.php'>Not a member?</a>
         <form action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="post">
             Username: <input type="text" name="user_name"><br>

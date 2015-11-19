@@ -1,9 +1,9 @@
-<?php 
+<?php
 /***********************************************************************
- * Example Registration Page
+ * Example Forgot Password Page.
  * @author Camilo Tejeiro   ,=,e 
- **********************************************************************/
-    
+ ***********************************************************************/
+
     /*
      * Page requires and includes.
      */
@@ -11,35 +11,28 @@
     require_once('../shared_php/user_forms_validation.php');
     require_once('../shared_php/mysql_database.php');
     require_once('../shared_php/user_membership.php');
-    require_once('../shared_php/error_handling.php');    
+    require_once('../shared_php/error_handling.php'); 
 
     /*
      * Vars declaraction and initialization.
-     */ 
-    // Page Header variables.
-    $page_title = 'Registration - CAT';
-    $page_description = 'registration page';
+     */    
+    // Header variables.
+    $page_title = 'Forgot Password - CAT';
+    $page_description = 'Forgot password page';
     $page_author = 'CAT team';
-    //$page_styles = 'css/registration.css';
-        
-    // page script variables.
-    $page_result_code = 0;
-    $page_message = "Please enter your registration information";
-    
-    $user_email = "";
-    $user_name = "";
-    $user_password = "";
-    $user_password2 = "";
+    //$page_styles = 'css/login.css';
 
-    /*
-     * Page script logic
-     */
+    //page script variables.
+    $page_result_code = SUCCESS_NO_ERROR;
+    $page_message = "Input your username, we will send you an email to reset your password";
+
+    $user_name = "";
+
+    
     session_start();
     
-    $page_result_code = check_login_session();
-    
-     // if a login session exists, make sure you redirect to the my account page. 
-    if ($page_result_code == SUCCESS_NO_ERROR)
+    // if a login session exists, make sure you redirect to the my account page. 
+    if (check_login_session() == SUCCESS_NO_ERROR)
     {
         // redirect to the 'user_account' page
         // REMEMBER:
@@ -52,24 +45,25 @@
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
-            // Create short variable names. 
-            $user_email = $_POST['user_email']; 
-            $user_name = $_POST['user_name'];
-            $user_password = $_POST['user_password'];
-            $user_password2 = $_POST['user_password2'];
             
-            $page_result_code = validate_registration_form($user_email, $user_name, $user_password, $user_password2);
-        
+            // Create short variable names. 
+            $user_name = $_POST['user_name'];
+            
+            $page_result_code = validate_reset_password_form($user_name);
+            
             // if validation was succesful
             if ($page_result_code == SUCCESS_NO_ERROR)
             {
-                $page_result_code = register_user($user_name, $user_email, $user_password);
+                // generate a random password.
+                // update password in users database.
+                // send password.
+                $page_result_code = reset_password($user_name);
                 
-                if($page_result_code == SUCCESS_NO_ERROR)
+                if ($page_result_code == SUCCESS_NO_ERROR)
                 {
-                    $page_message = "registration successful"; 
+                    $page_message = "Password reset and sent to your e-mail";
                     
-                    // redirect to the 'login' page
+                    // redirect to the 'user_account' page
                     // REMEMBER:
                     // header() must be called before any actual output is 
                     // sent, either by normal HTML tags, blank lines in a file, or from PHP.
@@ -78,11 +72,12 @@
                 }
                 else
                 {
-                    handle_result_code($page_result_code, $page_message);
+                    handle_result_code($page_result_code, $page_message);                   
                 }
+
             }
             else
-            {   
+            {
                 handle_result_code($page_result_code, $page_message);
             }
         }
@@ -93,18 +88,15 @@
 <html lang="en">
     
     <?php require_once('../shared_php/page_header.php'); ?>
-
+    
     <body>
-        <h4>Registration Page</h4>
+        <h4>Forgot Password Page</h4>
         <p><?php echo "$page_message"; ?></p>
         <form action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?> method="post">
-            E-mail Address: <input type="text" name="user_email"><br>
-            Username (max 16 characters): <input type="text" name="user_name" maxlength=16><br>
-            Password (between 6 and 16 characters): <input type="password" name="user_password" maxlength=16><br>
-            Repeat Password: <input type="password" name="user_password2" maxlength=16><br>
-            <input type="submit" name="register" value="Register" />            
+            Username: <input type="text" name="user_name"><br>
+            <input type="submit" name="reset_password" value="reset password" /> 
         </form>
-        <a href="../index.php">Already have an account, login?</a>
     </body>
-
 </html>
+
+
