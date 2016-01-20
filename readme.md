@@ -1,5 +1,5 @@
-Osohm Websites Repo
-===================
+Osohm.Com Legacy Website
+========================
 
-This repository will hold all of the websites and 
-domains under osohm.
+The following is our repository holding our legacy osohhm.com website 
+for reference.

@@ -7,3 +7,9 @@
 # e.g. project_name-v0.3-20151008 is a snapshot copy 
 # of our project for easy reference and should not be pushed.
 *-v*
+
+# Ignore the database private info 
+*osohm_database_info.php
+
+# Ignore the database private info.
+*mysql_database.php
