@@ -1,0 +1,33 @@
+/***********************************************************************
+* Login Page CSS for osohm platform.
+***********************************************************************/
+
+/****************************
+ * Login Section Properties 
+ ****************************/
+#login-section
+{
+    text-align: center;
+}
+
+
+#login-section-title
+{
+    display: none;
+}
+
+/* Overriding Properties for Larger Devices. */
+
+/* Larger than phablet */
+@media (min-width: 550px) 
+{
+    #login-section
+    {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+    #login-section-title
+    {
+        display: block;
+    }
+}

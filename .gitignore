@@ -6,5 +6,3 @@
 # Ignore the database private info 
 *osohm_database_info.php
 
-# Ignore the database private info.
-*mysql_database.php
