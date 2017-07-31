@@ -7,3 +7,6 @@ github_username:  camilotejeiro
 
 # Build settings
 markdown: kramdown
+
+# Excludes:
+exclude: ["osohm_com_dynamic-v0.2-20151203", "osohm_com_static-v0.1-20151028"]
