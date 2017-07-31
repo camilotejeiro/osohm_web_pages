@@ -1,5 +1,4 @@
-Osohm Legacy Web Pages
-======================
+Osohm Website
+=============
 
-The following is our repository holding our legacy osohhm web pages 
-for reference.
+The following is our repository holding our osohhm web pages for reference.
