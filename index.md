@@ -1,5 +1,5 @@
-OSOHM -- Open Source Open Hardware Movement
-===========================================
+Open Software Open Hardware Movement
+====================================
 
 About
 -----
@@ -85,27 +85,34 @@ but in the next magic show in town, this is not sustainable.
 
 When we base our consumption decisions on inaccurate or misleading information:
 
-We lose our freedom of choice: We are told what we need and we continuously
-overspend to purchase items we don’t really need.  We lose our savings: Our
-continuous overspending makes saving for our future impossible and makes us
-specially vulnerable to the use of credit.  We hurt the environment: Though
-high demand is great for businesses, over-utilization  depletes natural
-resources. Companies are mass manufacturing items we don’t  need which
-quickly end up in our landfills.  We are often overcharged: Because we have
-no knowledge of the value of the technology we use, we are often sold
-overcharged products with nice looking cases.  We give away our privacy:
-Because we have no access to the underlying engineering behind the products
-we use, companies add functionality to learn of the places we frequent,
-track the websites we visit and monitor our behavior and consumption
-choices. This data is then be sold to advertising agencies or given to
-government institutions.  We are constantly buying upgrades: Our technology
-suddenly becomes obsolete and we are encouraged (and sometimes coerced) to
-dispose of our existing functional technology to purchase the new and
-upgraded.  We stop learning: We are told we don’t need to; new is always
-best. Advertisers can teach us everything we need to know to reap the
-benefits of technology. The good news is we don’t need to think about the
-science and engineering behind  technology (that takes effort). The bad
-news is that advertisers don’t need to either.
+- We lose our freedom of choice: We are told what we need and we continuously
+overspend to purchase items we don’t really need.  
+
+- We lose our savings: Our continuous overspending makes saving for our future 
+impossible and makes us specially vulnerable to the use of credit.  
+
+- We hurt the environment: Though high demand is great for businesses, 
+over-utilization  depletes natural resources. Companies are mass manufacturing 
+items we don’t  need which quickly end up in our landfills.  
+
+- We are often overcharged: Because we have no knowledge of the value of the 
+technology we use, we are often sold overcharged products with nice looking cases. 
+
+- We give away our privacy: Because we have no access to the underlying 
+engineering behind the products we use, companies add functionality to learn of 
+the places we frequent, track the websites we visit and monitor our behavior 
+and consumption choices. This data is then be sold to advertising agencies or 
+given to government institutions. 
+
+- We are constantly buying upgrades: Our technology suddenly becomes obsolete 
+and we are encouraged (and sometimes coerced) to dispose of our existing 
+functional technology to purchase the new and upgraded.  
+
+- We stop learning: We are told we don’t need to; new is always best. 
+Advertisers can teach us everything we need to know to reap the benefits of technology. 
+The good news is we don’t need to think about the science and engineering behind  
+technology (that takes effort). The bad news is that advertisers don’t need to 
+either.
 
 However, proprietary technology does benefit a few. Technology suppliers
 understand that it is not the consumer good that is truly valuable but the
