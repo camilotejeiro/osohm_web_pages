@@ -1,4 +1,4 @@
 Osohm Website
 =============
 
-The following is our repository holding our osohhm web pages for reference.
+The following is our repository holding our osohm web pages for reference.
