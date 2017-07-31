@@ -1,0 +1,9 @@
+# Site settings
+title: Osohm
+
+email: camilo.tejeiro@gmail.com
+twitter_username: camilotejeiro
+github_username:  camilotejeiro
+
+# Build settings
+markdown: kramdown
